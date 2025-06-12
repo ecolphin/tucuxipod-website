@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  cursor: url("img/pointer-before.png"), auto;
+}
+
+a:hover,
+button:hover,
+input:hover,
+img:hover,
+.clickable-word:hover,
+#next-btn:hover {
+  cursor: url("img/pointer-after.png"), pointer;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url("img/bk-gblue142.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100dvh;
+  position: relative;
+}
+
+.index {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  opacity: 0.95;
+  padding: 0.5rem 1rem;
+  height: auto;
+  min-height: 70px;
+  border: 0.5rem #24545a ridge;
+  box-shadow: #24545a 10px 10px 20px;
+  border-radius: 1rem;
+  margin: 2% 10%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.globo {
+  width: min(90vw, 80px);
+  height: auto;
+  max-height: 80px;
+}
+
+.nav-dir,
+.nav-esq {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+
+.index a {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.index a:hover {
+  text-decoration: underline;
+}
+
+.conteudo {
+  background-color: white;
+  opacity: 0.95;
+  border: 0.5rem #24545a ridge;
+  box-shadow: #24545a 10px 10px 20px;
+  border-radius: 1rem;
+  margin: 2% 10%;
+  padding: 4rem 6rem;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  margin-bottom: 3%;
+}
+
+.texto p {
+  font-size: 1.20rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  color: #1a3e42;
+  text-align: justify;
+}
+
+.texto p.dica,
+.texto p.chamada {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.bloco-especie {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 5%;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.info {
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.nome {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.caracteristicas {
+  text-align: justify;
+}
+
+.caracteristicas p {
+  padding-bottom: 7px;
+}
+
+img:hover {
+  transform: rotate(5deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.ave {
+  position: fixed;
+  top: 5vh;
+  left: 3vw; 
+  max-width: 80px;
+  height: auto;
+  z-index: 0;
+  animation: swim 20s linear infinite;
+  pointer-events: none;
+}

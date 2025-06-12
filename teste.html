@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golfinhos Incríveis</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f9ff;
+      color: #003d4d;
+    }
+    header {
+      background-color: #00aaff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0077aa;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #005f87;
+    }
+    section {
+      padding: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 0.5rem;
+    }
+    .question {
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #003d4d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .quiz-container {
+      margin-top: 2rem;
+      background-color: #ccf2ff;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #0077aa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Golfinhos Incríveis</h1>
+    <p>Descubra por que esses mamíferos marinhos são tão fascinantes!</p>
+  </header>
+
+  <nav>
+    <a href="#oque">O que são</a>
+    <a href="#comportamento">Comportamento</a>
+    <a href="#humanos">Golfinhos e Humanos</a>
+    <a href="#conservacao">Conservação</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <section id="oque">
+    <h2>O que são os golfinhos?</h2>
+    <div class="question">
+      <strong>🐬 Golfinhos são o quê?</strong>
+      <p>São mamíferos marinhos da ordem Cetacea, subordem Odontoceti (cetáceos com dentes).</p>
+    </div>
+    <div class="question">
+      <strong>🌎 Onde vivem?</strong>
+      <p>Em oceanos e rios, como o boto-cor-de-rosa na Amazônia.</p>
+    </div>
+  </section>
+
+  <section id="comportamento">
+    <h2>Comportamento e curiosidades</h2>
+    <div class="question">
+      <strong>🧠 Eles são inteligentes?</strong>
+      <p>Sim! Usam ferramentas, aprendem com o grupo e têm comportamentos culturais.</p>
+    </div>
+    <div class="question">
+      <strong>🎶 Como se comunicam?</strong>
+      <p>Com cliques, assobios e até "nomes" individuais.</p>
+    </div>
+  </section>
+
+  <section id="humanos">
+    <h2>Golfinhos e os humanos</h2>
+    <div class="question">
+      <strong>🏛️ Golfinhos na cultura humana</strong>
+      <p>Estão presentes em mitos gregos, filmes e são admirados por sua beleza e inteligência.</p>
+    </div>
+    <div class="question">
+      <strong>🎪 E em cativeiro?</strong>
+      <p>Espetáculos com golfinhos são controversos por causarem estresse e problemas comportamentais.</p>
+    </div>
+  </section>
+
+  <section id="conservacao">
+    <h2>Ameaças e conservação</h2>
+    <div class="question">
+      <strong>⚠️ Que perigos eles enfrentam?</strong>
+      <p>Pesca acidental, plásticos, poluição sonora e mudanças climáticas.</p>
+    </div>
+    <div class="question">
+      <strong>🌍 Como ajudar?</strong>
+      <p>Reduza plásticos, apoie ONGs, e compartilhe conhecimento.</p>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <h2>Quiz: Você conhece os golfinhos?</h2>
+    <div class="quiz-container">
+      <p><strong>Pergunta:</strong> Golfinhos são peixes?</p>
+      <button onclick="responderQuiz(true)">Sim</button>
+      <button onclick="responderQuiz(false)">Não</button>
+      <p id="resposta"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Projeto de Extensão - Universidade X - Disciplina de Conservação dos Cetáceos</p>
+  </footer>
+
+  <script>
+    function responderQuiz(resposta) {
+      const feedback = document.getElementById("resposta");
+      if (resposta) {
+        feedback.textContent = "❌ Errado! Golfinhos são mamíferos, não peixes.";
+      } else {
+        feedback.textContent = "✅ Correto! Golfinhos respiram por pulmões e amamentam seus filhotes.";
+      }
+    }
+  </script>
+</body>
+</html>

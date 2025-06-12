@@ -1,0 +1,80 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do corpo */
+  body {
+    background-color: black; /* Fundo escuro nostálgico */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden; /* Evita scroll */
+  }
+  
+  /* Cabeçalho */
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    color: #ffcc00; /* Cor vibrante, estilo retrô */
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ff99cc;
+  }
+  
+  /* Área principal */
+  .content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Estilização dos GIFs */
+  .gif {
+    position: absolute;
+    animation: float 6s infinite alternate ease-in-out;
+  }
+  
+  .gif img {
+    max-width: 120px; /* Tamanho responsivo */
+    width: 10vw; /* Responsivo ao tamanho da tela */
+    height: auto;
+  }
+  
+  /* Caixa de texto */
+  .text-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparência */
+    padding: 10px;
+    border: 2px dashed #ffcc00; /* Estilo retrô */
+    color: #00ffcc;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: #aaa;
+  }
+  
+  /* Animação de flutuação */
+  @keyframes float {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
