@@ -363,9 +363,9 @@ figcaption {
 }
 
 .peixe {
-    position: relative;
-    top: 58vh;
-    left: 85vw;
+    position: fixed;
+    top: 90vh;
+    left: 95vw;
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
@@ -374,11 +374,11 @@ figcaption {
 
 .wikipedia {
     position: relative;
-    top: 5vh;
-    left: 8vw;
+    top: 15vh;
+    left: 16vw;
     width: 100%;
     height: auto;
-    max-width: 70px;
+    max-width: 55px;
 }
 
 .janela {
