@@ -12,8 +12,9 @@ a:hover, button:hover, input:hover, img:hover, .clickable-word:hover, #botao-pro
 body {
     font-family: 'Inter', sans-serif;
     background-image: url("img/bkg-blue105.gif");
-    min-height: 100dvh;
+    min-height: 100vh;
     position: relative;
+    background-attachment: fixed;
 }
 
 h3 {
@@ -24,7 +25,7 @@ figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1em auto 2em auto;
+    margin: 1.5em auto 2em auto;
     gap: 0.5em;
 }
 
@@ -32,7 +33,7 @@ figcaption {
     display: flex;
     justify-content: center;
     font-style: italic;
-    font-size: 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
     text-align: center;
     color: gray;
     width: 90%;
@@ -43,8 +44,13 @@ figcaption {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.images:hover {
+    transform: scale(1.02);
 }
 
 .index {
@@ -70,7 +76,7 @@ figcaption {
 }
 
 .globo {
-    width: min(90vw, 80px);
+    width: clamp(50px, 8vw, 80px);
     height: auto;
     max-height: 80px;
 }
@@ -85,7 +91,7 @@ figcaption {
 
 .index a {
     font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 14px;
+    font-size: clamp(12px, 1.4vw, 16px);;
     letter-spacing: 0.5px;
     color: black;
     text-decoration: none;
@@ -98,22 +104,28 @@ figcaption {
 
 .artigo {
     display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 30px;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
     margin: 2% auto;
     max-width: 1400px;
-    height: auto;
+    padding: 0 2rem;
+    z-index: 2;
 }
 
-.topicos {
-    background-color: white;
-    opacity: 0.95;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.topicos,
+.mais-artigos {
+    background-color: rgba(255, 255, 255);
     padding: 2rem;
+    border-radius: 1rem;
     margin-bottom: 1rem;
     border: 0.5rem #24545A ridge;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.menu-lateral {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
 }
 
 .menu-lateral ul {
@@ -122,58 +134,53 @@ figcaption {
 }
 
 .menu-lateral li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .menu-lateral a {
     color: #947FDC;
     text-decoration: none;
+    font-size: clamp(13px, 1.2vw, 15px);
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
 }
 
 .menu-lateral a:hover {
     text-decoration: underline;
 }
 
-.mais-artigos {
-    background-color: white;
-    opacity: 0.95;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-    border: 0.5rem #24545A ridge;
-}
-
 .conteudo {
-    flex-grow: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .conteudo-texto {
-    background-color: white;
-    opacity: 0.95;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem 6rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: clamp(2rem, 5vw, 6rem) clamp(1.5rem, 4vw, 4rem);
     border-radius: 1rem;
-    min-width: 1100px;
-    height: auto;
+    width: 100%;
     border: 0.5rem #24545A ridge;
 }
 
 .conteudo-texto h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 2rem;
     color: #1a3e42;
     letter-spacing: -0.025em;
     text-align: center;
 }
 
+.conteudo-texto h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin: 2rem 0 1rem 0;
+    color: #2c3e50;
+}
+
 .conteudo-texto p {
-    font-size: 1.20rem;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
     line-height: 1.5;
     margin-bottom: 1.2rem;
     color: #1a3e42;
@@ -181,18 +188,18 @@ figcaption {
 }
 
 #botao-proximo {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: clamp(14px, 1.4vw, 16px);;
     border: none;
     background: #475253;
     color: white;
-    border-radius: 6px;
-    cursor: pointer;
+    border-radius: 0.5rem;
 }
 
 #botao-proximo:hover {
-    background: #7d9093;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .clickable-word {
@@ -323,7 +330,7 @@ figcaption {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -381,15 +388,6 @@ figcaption {
     max-width: 55px;
 }
 
-.janela {
-    position: relative;
-    top: 150vh;
-    left: 70vw;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
-    max-width: 120px;
-}
 
 @keyframes swim1 {
     0% { left: -100px; }

@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  image-rendering: pixelated;
   cursor: url("img/pointer-before.png"), auto;
 }
 
@@ -20,7 +19,7 @@ body {
   background-image: url("img/bk-gblue142.jpg");
   background-position: center center;
   background-attachment: fixed;
-  min-height: 100dvh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -61,7 +60,8 @@ body {
 }
 
 .index a {
-  font-size: 14px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: clamp(12px, 1.4vw, 16px);;
   letter-spacing: 0.5px;
   color: black;
   text-decoration: none;
@@ -79,7 +79,7 @@ body {
   box-shadow: #24545a 10px 10px 20px;
   border-radius: 1rem;
   margin: 2% 10%;
-  padding: 4rem 6rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 6vw, 6rem);
 }
 
 .texto {
@@ -94,7 +94,7 @@ body {
 }
 
 .texto p {
-  font-size: 1.20rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.5;
   margin-bottom: 1.2rem;
   color: #1a3e42;
@@ -109,9 +109,11 @@ body {
 
 .bloco-especie {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 25rem;
+  min-height: 25rem;
+  height: auto;
   margin-bottom: 5%;
 }
 
@@ -121,6 +123,7 @@ body {
   justify-content: center;
   width: 50%;
   height: 100%;
+  object-fit: contain;
 }
 
 .info {
@@ -130,7 +133,7 @@ body {
 }
 
 .nome {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -141,6 +144,11 @@ body {
 
 .caracteristicas p {
   padding-bottom: 7px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 img:hover {
@@ -166,4 +174,28 @@ img:hover {
   z-index: 0;
   animation: swim 20s linear infinite;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .index { margin: 2% 5%; }
+  .conteudo { 
+    margin: 2% 5%; 
+    padding: 2rem 1.5rem; 
+  }
+  .bloco-especie { 
+    flex-direction: column; 
+    height: auto; 
+  }
+  .foto img {
+  max-height: 15rem;
+}
+  .foto, .info { width: 100%; }
+  
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .conteudo { padding: 3rem 4rem; }
+  .foto img {
+  max-height: 12rem;
+}
 }

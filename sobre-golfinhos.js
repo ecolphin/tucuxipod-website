@@ -9,7 +9,7 @@ const artigos = [
         <p>No próximo tópico, falaremos sobre as principais características presentes no corpo de um odontoceto, pontuando, sempre que possível, as diferenças entre eles e as baleias (misticetos), a fim de esclarecer melhor a delimitação entre os dois grupos.</p>`
     },
     {
-        title: "PRINCIPAIS CARACTERÍSTICAS!",
+        title: "PRINCIPAIS CARACTERÍSTICAS",
         body: `<figure><img src="img/anatomy.webp" alt="Imagem didática da anatomia de um golfinho." class="images">
         <figcaption>Morfologia do golfinho-nariz-de-garrafa (<i>Tursiops truncatus</i>) © 2020 Roundhouse Aquarium.</figcaption></figure>
         <p>Ao longo de um período de milhões de anos de evolução, os odontocetos desenvolveram adaptações incríveis para a vida integral no ambiente aquático. Essas adaptações incluem modificações na morfologia que permitiram que esses animais aprimorassem um desempenho na locomoção, caça e comunicação muito eficientes, que os fizeram ótimos predadores!</p>
@@ -26,7 +26,7 @@ const artigos = [
         <p>As nadadeiras peitorais são as únicas com esqueleto ósseo interno e estão dispostas uma de cada lado do corpo. Elas são usadas principalmente durante o nado para mudar a direção e manter o equilíbrio corporal. Já a nadadeira caudal é conectada ao corpo pelo <span class="clickable-word" data-image="img/p.webp" data-credits="Foto: Seta destaca o pedúnculo caudal.">pedúnculo caudal</span>, uma estrutura formada por feixes musculares resistentes que permitem a propulsão dos odontocetos em movimentos verticais (para cima e para baixo). Por fim, a nadadeira dorsal (ausente em belugas, narvais, <span class="clickable-word" data-image="img/golfinho-liso.webp" data-credits="Foto: Golfinho-liso-do-norte (Lissodelphis borealis). © Robin Gwen Agarwal via iNaturalist, licenciada sob CC BY-NC 4.0">golfinhos-lisos</span> e <span class="clickable-word" data-image="img/marsopa.webp" data-credits="Foto: Marsopa-sem-nadadeira-dorsal-do-Yangtze (Neophocaena asiaeorientalis). © Alex Kantorovich">marsopas-sem-nadadeira-dorsal</span>) é altamente vascularizada e desempenha um importante papel nos mecanismos de dissipação do calor interno e também no equilíbrio.</p>`
     },
     {
-        title: "DISTRIBUIÇÃO E HABITAT!",
+        title: "DISTRIBUIÇÃO E HABITAT",
         body: `<figure><img src="img/map.webp" class="images">
         <figcaption>Mapa do mundo.</figcaption></figure>
         <p>Os odontocetos estão distribuídos por todo o planeta, habitando uma grande variedade de ambientes aquáticos. Eles são encontrados das águas frias das regiões polares até os rios tropicais da da Amazônia!</p>
